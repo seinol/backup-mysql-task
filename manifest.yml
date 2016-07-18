@@ -1,0 +1,12 @@
+applications:
+  - name: backup-mysql-task
+    command: backup-mysql-task
+    memory: 32m
+    buildpack: https://github.com/ozzyjohnson/heroku-buildpack-multi
+    no-route: true
+    health-check-type: none
+    services: # mysql service instances for backup
+    - uaa-db
+    - income-outcome-db
+    env:
+      BUCKET_NAME: mysql-backup-cf

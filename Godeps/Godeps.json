@@ -1,0 +1,21 @@
+{
+	"ImportPath": "github.com/making/backup-mysql-task",
+	"GoVersion": "go1.6",
+	"GodepVersion": "v61",
+	"Deps": [
+		{
+			"ImportPath": "github.com/cloudfoundry-community/go-cfenv",
+			"Comment": "v1.12-2-gb4bebec",
+			"Rev": "b4bebec47a425334d2a076cf99329464c9e611f3"
+		},
+		{
+			"ImportPath": "github.com/mitchellh/mapstructure",
+			"Rev": "281073eb9eb092240d33ef253c404f1cca550309"
+		},
+		{
+			"ImportPath": "github.com/robfig/cron",
+			"Comment": "v1-20-g6f2e828",
+			"Rev": "6f2e8282a1a0d694e55a48ce7d077ee46747feeb"
+		}
+	]
+}
