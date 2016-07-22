@@ -23,7 +23,7 @@ func mysqlbackup() {
 
 func main() {
 	c := cron.New()
-	c.AddFunc("0 3 * * * *", mysqlbackup)
+	c.AddFunc("0 0 3 * * *", mysqlbackup)
 	c.Start()
 
 	var port string
