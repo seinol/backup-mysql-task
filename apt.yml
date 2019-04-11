@@ -1,0 +1,11 @@
+---
+repos:
+  - deb http://de.archive.ubuntu.com/ubuntu artful main restricted universe multiverse
+  - deb http://de.archive.ubuntu.com/ubuntu artful-updates main restricted universe multiverse
+  - deb http://de.archive.ubuntu.com/ubuntu artful-security main restricted universe multiverse
+  - deb http://de.archive.ubuntu.com/ubuntu artful-backports main restricted universe multiverse
+packages:
+  - mysql-client
+  - python
+  - mongo-tools
+  - http://de.archive.ubuntu.com/ubuntu/pool/universe/s/s3cmd/s3cmd_1.0.0-1_all.deb

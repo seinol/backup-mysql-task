@@ -1,0 +1,13 @@
+applications:
+  - name: db-dumper-rotation
+    buildpack: https://github.com/cloudfoundry/multi-buildpack.git
+    path: ../
+    command: backup-mysql-task
+    disk_quota: 1G
+    env:
+      CRON_EXPRESSION: 0 30 * * * 1-6
+    health-check-type: none
+    memory: 512M
+    no-route: true
+    services: # mariadb/mongodb service instances for backup
+    # - my-service

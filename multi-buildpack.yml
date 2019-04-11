@@ -1,0 +1,4 @@
+
+buildpacks:
+  - https://github.com/cloudfoundry/apt-buildpack.git
+  - https://github.com/cloudfoundry/go-buildpack.git
