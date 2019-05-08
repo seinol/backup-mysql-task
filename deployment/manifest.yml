@@ -1,6 +1,8 @@
 applications:
   - name: db-dumper
-    buildpack: https://github.com/cloudfoundry/multi-buildpack.git
+    buildpacks:
+      - https://github.com/cloudfoundry/apt-buildpack.git
+      - https://github.com/cloudfoundry/go-buildpack.git
     path: ../
     command: backup-mysql-task
     disk_quota: 1G
@@ -12,3 +14,4 @@ applications:
     services: # mariadb/mongodb service instances for backup
     # - my-service
     # - my-service2
+    stack: cflinuxfs3

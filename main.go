@@ -80,7 +80,7 @@ func dbdumper() {
 			log.Fatal("creating bucket for "+s.Name+" mongodb failed: ", err.Error())
 			return
 		}
-		_, err = exec.Command("sh", "-c", "cd /tmp/"+s.Name+"/"+s.Credentials["database"].(string)+"/ && rename 's/(.*)$/"+time.Now().Format("2006-01-02")+"_$1/' *.* && cd").Output()
+		_, err = exec.Command("sh", "-c", "cd /tmp/"+s.Name+"/"+s.Credentials["database"].(string)+"/ && for f in *; do mv \"$f\" \""+time.Now().Format("2006-01-02")+"_$f\"; done && cd").Output()
 		if err != nil {
 			fmt.Println("renaming "+s.Name+" dump files failed: ", err.Error())
 		}
